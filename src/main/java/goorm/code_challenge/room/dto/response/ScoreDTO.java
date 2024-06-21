@@ -10,14 +10,16 @@ import lombok.Setter;
 @Setter
 public class ScoreDTO {
 	private String username;
+	private String profileImage;
 	private int rank;
 	private LocalTime durationTile;
 	private boolean isSolved;
 	private int level;
 	private float extraEXP;
 
-	public ScoreDTO(String username, LocalTime durationTile,boolean isSolved,int rank,int level,float extraEXP) {
+	public ScoreDTO(String username,String profileImage,LocalTime durationTile,boolean isSolved,int rank,int level,float extraEXP) {
 		this.username = username;
+		this.profileImage = profileImage;
 		this.isSolved = isSolved;
 		this.durationTile = durationTile;
 		this.rank=rank;

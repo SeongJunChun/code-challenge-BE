@@ -58,10 +58,10 @@ public class ScoreService {
 				int exp = (roomParticipants.size() - rankCount) * 20;
 				user.setExpPoints(user.getExpPoints() + exp);
 				userRepository.save(user);
-				scoreDTOS.add(new ScoreDTO(user.getName(), submission.getDurationTime(), submission.isSolve(), rankCount,
+				scoreDTOS.add(new ScoreDTO(user.getName(), user.getProfileImage(), submission.getDurationTime(), submission.isSolve(), rankCount,
 					user.getLevel(), user.getExtraExpPoints()));
 			} else
-				scoreDTOS.add(new ScoreDTO(user.getName(), submission.getDurationTime(), submission.isSolve(), 0,
+				scoreDTOS.add(new ScoreDTO(user.getName(), user.getProfileImage(), submission.getDurationTime(), submission.isSolve(), 0,
 					user.getLevel(), user.getExtraExpPoints()));
 		}
 		return scoreDTOS;
