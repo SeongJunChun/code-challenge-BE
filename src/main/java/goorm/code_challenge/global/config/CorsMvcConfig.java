@@ -11,7 +11,7 @@ public class CorsMvcConfig implements WebMvcConfigurer {
 	public void addCorsMappings(CorsRegistry corsRegistry) {
 
 		corsRegistry.addMapping("/**")
-				.allowedOrigins("https://localhost:3000")
+			.allowedOrigins("https://main.d25uyro5rrja9q.amplifyapp.com", "https://localhost:3000")
 				.allowedMethods("GET", "POST", "PUT", "DELETE")
 				.allowedHeaders("access", "Authorization", "Content-Type")
 				.exposedHeaders("access", "Authorization")
